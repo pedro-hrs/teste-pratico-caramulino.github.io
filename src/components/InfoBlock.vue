@@ -1,7 +1,7 @@
 <template>
   <div class="info-block">
     <div class="info-content">
-      <img class="icon" :src="`/src/assets/icons/${iconName}`" alt="">
+      <img class="icon" :src="`@/assets/icons/${iconName}`" alt="">
       <h3 class="title">{{ title }}</h3>
       <p class="description">{{ description }}</p>
     </div>
