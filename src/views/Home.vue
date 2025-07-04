@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main id="main-content" tabindex="-1">
     <HeroSection 
       title="Browse everything."/>
     <TrustedBrandsSection 
@@ -19,6 +19,7 @@
       title="Map Your Success"
       :mapYourSuccessData="mapYourSuccessData" />
     
+    <FeaturesTabsSection/>
     <ConnectUsSection/>
     <Footer/>
   </main>
@@ -33,6 +34,7 @@ import BigPictureSection from '../components/Sections/BigPictureSection.vue';
 import SpecsSection from '../components/Sections/SpecsSection.vue';
 import PhraseSection from '../components/Sections/PhraseSection.vue';
 import MapYourSuccessSection from '../components/Sections/MapYourSuccessSection.vue';
+import FeaturesTabsSection from '../components/Sections/FeaturesTabsSection.vue';
 import ConnectUsSection from '../components/Sections/ConnectUsSection.vue';
 import Footer from '../components/Footer.vue';
 
@@ -47,6 +49,7 @@ export default {
     SpecsSection,
     PhraseSection,
     MapYourSuccessSection,
+    FeaturesTabsSection,
     ConnectUsSection,
     Footer
   },

@@ -63,21 +63,21 @@ export default {
   gap: 20px;
   width: 100%;
   
-  // Desktop: mostra todos os cards lado a lado
+        // Desktop: shows all cards side by side
   @media (min-width: 1024px) {
     justify-content: start;
     flex-wrap: wrap;
   }
   
-  // Tablet e Mobile: scroll horizontal
+      // Tablet and Mobile: horizontal scroll
   @media (max-width: 1023px) {
     overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 10px; // Espaço para scrollbar
+    padding-bottom: 10px; // Space for scrollbar
     
-    // Esconde scrollbar no webkit
+    // Hide scrollbar in webkit
     &::-webkit-scrollbar {
       height: 6px;
     }
@@ -96,7 +96,7 @@ export default {
       }
     }
     
-    // Garante que os cards não quebrem linha
+    // Ensures that cards don't break line
     > * {
       flex-shrink: 0;
     }

@@ -1,6 +1,14 @@
 <template>
-  <button :class="`btn btn-${variant}`" @click="handleClick">{{ label }}
-    <img v-if="withIcon" src="@/assets/icons/arrow-up-right.svg"  width="8px" height="8px" :withIcon="withIcon" alt="Arrow Icon" class="mx-2" />
+  <button 
+    :class="`btn btn-${variant}`" 
+    @click="handleClick"
+    @keydown.enter="handleClick"
+    @keydown.space="handleClick"
+    :aria-label="ariaLabel || label"
+    :type="buttonType"
+  >
+    {{ label }}
+    <img v-if="withIcon" src="@/assets/icons/arrow-up-right.svg" width="8px" height="8px" :withIcon="withIcon" alt="Arrow Icon" class="mx-2" />
   </button>
 </template>
 <script>
@@ -23,6 +31,14 @@ export default {
     navigateTo: {
       type: String,
       default: null
+    },
+    ariaLabel: {
+      type: String,
+      default: null
+    },
+    buttonType: {
+      type: String,
+      default: 'button'
     }
   },
   methods: {

@@ -1,0 +1,95 @@
+// Accessibility improvements
+
+// Focus styles
+*:focus {
+  outline: 2px solid $color-primary;
+  outline-offset: 2px;
+}
+
+
+
+// High contrast mode support
+@media (prefers-contrast: high) {
+  .btn-primary {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+  }
+  
+  .nav-link {
+    color: #000;
+    font-weight: 700;
+  }
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+// Screen reader only text
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Better focus indicators for interactive elements
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid $color-primary;
+  outline-offset: 2px;
+}
+
+// Improved button contrast
+.btn {
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(72, 92, 17, 0.25);
+  }
+}
+
+// Form field improvements
+.form-control:focus {
+  border-color: $color-primary;
+  box-shadow: 0 0 0 0.2rem rgba(72, 92, 17, 0.25);
+}
+
+// Navigation improvements
+.nav-link {
+  &:focus {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+}
+
+// Modal accessibility
+.modal {
+  &:focus {
+    outline: none;
+  }
+}
+
+// Tab navigation improvements
+.nav-pills .nav-link {
+  &:focus {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+} 

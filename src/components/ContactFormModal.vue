@@ -17,6 +17,8 @@
                 v-model="formData.name"
                 :class="{ 'is-invalid': errors.name }"
                 required
+                aria-describedby="name-error"
+                autocomplete="name"
               >
               <div class="invalid-feedback" v-if="errors.name">
                 {{ errors.name }}
@@ -32,6 +34,8 @@
                 v-model="formData.email"
                 :class="{ 'is-invalid': errors.email }"
                 required
+                aria-describedby="email-error"
+                autocomplete="email"
               >
               <div class="invalid-feedback" v-if="errors.email">
                 {{ errors.email }}
@@ -46,6 +50,8 @@
                 id="phone" 
                 v-model="formData.phone"
                 :class="{ 'is-invalid': errors.phone }"
+                aria-describedby="phone-error"
+                autocomplete="tel"
               >
               <div class="invalid-feedback" v-if="errors.phone">
                 {{ errors.phone }}
@@ -82,6 +88,8 @@
                 v-model="formData.message"
                 :class="{ 'is-invalid': errors.message }"
                 required
+                aria-describedby="message-error"
+                placeholder="Digite sua mensagem aqui..."
               ></textarea>
               <div class="invalid-feedback" v-if="errors.message">
                 {{ errors.message }}
@@ -89,8 +97,8 @@
             </div>
             
             <div class="d-flex justify-content-end gap-2">
-              <BaseButton label="Cancel" variant="tertiary" @click="closeModal"/> 
-              <BaseButton label="Send" variant="primary" @click="submitForm"/> 
+              <BaseButton label="Cancel" variant="tertiary" @click="closeModal" @keydown.enter="closeModal" @keydown.space="closeModal"/> 
+              <BaseButton label="Send" variant="primary" @click="submitForm" @keydown.enter="submitForm" @keydown.space="submitForm"/> 
             </div>
           </form>
         </div>

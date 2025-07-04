@@ -29,6 +29,8 @@
       aria-controls="mobileNavbar" 
       aria-expanded="false" 
       aria-label="Toggle navigation"
+      @keydown.enter="toggleMobileMenu"
+      @keydown.space="toggleMobileMenu"
       >
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -104,6 +106,25 @@ export default {
           behavior: 'smooth',
           block: 'start'
         });
+        // Focus management for accessibility
+        element.setAttribute('tabindex', '-1');
+        element.focus();
+      }
+    },
+    
+    toggleMobileMenu() {
+      const navbarCollapse = document.querySelector('#mobileNavbar');
+      if (navbarCollapse) {
+        const isExpanded = navbarCollapse.classList.contains('show');
+        const button = document.querySelector('.navbar-toggler');
+        
+        if (isExpanded) {
+          navbarCollapse.classList.remove('show');
+          button.setAttribute('aria-expanded', 'false');
+        } else {
+          navbarCollapse.classList.add('show');
+          button.setAttribute('aria-expanded', 'true');
+        }
       }
     }
   }
@@ -240,7 +261,7 @@ export default {
   }
 }
 
-// Ajuste para o conteúdo não ficar sob o navbar fixo
+    // Adjust for content not to be under the fixed navbar
 body {
   padding-top: 80px;
 }

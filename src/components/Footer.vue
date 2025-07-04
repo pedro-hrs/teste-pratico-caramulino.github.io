@@ -21,6 +21,14 @@
       <div class="footer-center">
       </div>
       <div class="footer-right">
+        <span class="footer-social">
+          <a href="http://www.facebook.com">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="http://www.instagram.com">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </span>
         <span class="footer-rights">All Rights Reserved</span>
       </div>
     </div>
@@ -34,6 +42,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import './../scss/colors.scss';
+
+.footer-social{
+  a{
+    color: $color-primary;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+    padding: 5px;
+    &:hover{
+      color: $color-primary-light;
+    }
+  }
+  
+} 
 nav.footer-navigation {
   ul {
     display: flex;
@@ -106,6 +128,7 @@ nav.footer-navigation {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 20px;
 }
 .footer-rights {
   color: #7e8a6e;

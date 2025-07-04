@@ -1,5 +1,6 @@
 // Import theme configuration (includes colors, animations and Bootstrap)
 @import "./theme.scss";
+@import "./accessibility.scss";
 
 html {
   scroll-behavior: smooth;
