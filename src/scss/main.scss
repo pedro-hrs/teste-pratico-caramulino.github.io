@@ -1,4 +1,79 @@
-@import "./design-tokens.scss";
-@import "./components.scss";
-@import "./animations.scss";
-@import "bootstrap/scss/bootstrap";
+// Import theme configuration (includes colors, animations and Bootstrap)
+@import "./theme.scss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+hr{
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid $color-gray-400;
+}
+
+// Fix the container width for medium screens to better experience in mobile devices
+@media (max-width: 768px) {
+    .container-md, .container-sm, .container {
+        max-width: 100%;
+    }
+}
+
+// Typography - Shared Styles
+
+.monospace{
+  font-size: 0.8rem;
+  color: $color-primary;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h2.title {
+  font-family: 'Crimson Text', serif;
+  font-size: 3.5rem;
+  font-weight: 100;
+  color: $color-black;
+  text-align: left;
+  margin-bottom: 1rem;
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+    
+  }
+}
+
+h3.title{
+  font-size: 1.25em;
+  font-weight: thin;
+  font-family: 'Crimson Text', serif;
+  font-weight: 100;
+  padding-bottom: 0.5rem;
+}
+
+p.description {
+  font-size: 0.9rem;
+  font-family: "DM Sans", sans-serif;
+  color: $color-gray-500;
+  font-weight: 300;
+}
+
+p.subtitle {
+  font-family: 'DM Sans', serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: $color-gray-600;
+  text-align: left;
+  margin-bottom: 2rem;
+}

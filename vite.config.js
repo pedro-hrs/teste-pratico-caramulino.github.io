@@ -13,10 +13,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `
-          @import "./src/scss/main.scss";
-        `,
-        includePaths: ['node_modules']
+        includePaths: ['node_modules', './src/scss']
       }
     }
   }

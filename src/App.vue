@@ -1,26 +1,28 @@
 <template>
-  <div class="container">
-    <h1>Hello Word! </h1>
-    <button class="btn btn-primary"@click="click()">Button</button>
+  <div id="app">
+    <NavigationMenu :items="menuItems" />
+    <router-view />
   </div>
 </template>
 
 <script>
+// import BaseButton from './components/BaseButton.vue';
+import NavigationMenu from './components/NavigationMenu.vue';
+
 export default {
+  name: 'App',
+  components: {
+    NavigationMenu,
+  },
   data() {
     return {
-      count: 0
-    }
-  },
-  methods: {
-    click() {
-      this.count++;
-      console.log(`Button clicked ${this.count} times`);
-    }
+      menuItems: [
+        { label: 'Benefits', link: '#benefits' },
+        { label: 'Specifications', link: '/specifications' },
+        { label: 'How-to', link: '/How-to' },
+        { label: 'Contact Us', link: '/contact' }
+      ]
+     }
   }
 }
 </script>
-
-<style scoped lang="scss">
-
-</style>

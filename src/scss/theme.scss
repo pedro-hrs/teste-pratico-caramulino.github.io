@@ -1,0 +1,11 @@
+// Custom theme configuration
+@import "./colors.scss";
+@import "./animations.scss";
+
+// Set Bootstrap variables
+$primary: $color-primary;
+$secondary: $color-primary-light;
+$secondary-rgb: 142, 156, 120;
+
+// Import Bootstrap with custom variables
+@import "bootstrap/scss/bootstrap";
