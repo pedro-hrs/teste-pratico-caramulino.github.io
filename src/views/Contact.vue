@@ -1,6 +1,6 @@
 <template>
   <main id="contact">
-    <section class="container">
+    <section class="container pt-3">
       <div class="row justify-content-center align-items-center py-5">
         <div class="col-md-6 py-3">
           <img src="@/assets/blocks.avif" alt="Contact Image" class="contact-image img-fluid">

@@ -24,8 +24,7 @@
       <button 
       class="navbar-toggler" 
       type="button" 
-      data-bs-toggle="collapse" 
-      data-bs-target="#mobileNavbar" 
+      @click="toggleMobileMenu"
       aria-controls="mobileNavbar" 
       aria-expanded="false" 
       aria-label="Toggle navigation"
@@ -35,10 +34,10 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="mobileNavbar">
+    <div class="collapse navbar-collapse" id="mobileNavbar" :class="{ 'show': isMobileMenuOpen }">
       <ul class="navbar-nav">
         <li class="nav-item" v-for="(item, index) in items" :key="index">
-          <router-link v-if="item.link.startsWith('/')" class="nav-link" :to="item.link">{{ item.label }}</router-link>
+          <router-link v-if="item.link.startsWith('/')" class="nav-link" :to="item.link" @click="closeMobileMenu">{{ item.label }}</router-link>
           <a v-else class="nav-link" @click="handleMobileAnchorClick(item.link)" href="javascript:void(0)">{{ item.label }}</a>
         </li>
       </ul>
@@ -52,12 +51,16 @@
 
 <script>
 import BaseButton from './BaseButton.vue';
-import { Collapse } from 'bootstrap';
 
 export default {
   name: 'NavigationMenu',
   components: {
     BaseButton
+  },
+  data() {
+    return {
+      isMobileMenuOpen: false
+    }
   },
   props: {
     items: {
@@ -83,19 +86,7 @@ export default {
     
     handleMobileAnchorClick(anchor) {
       // Close mobile menu
-      const navbarCollapse = document.querySelector('#mobileNavbar');
-      
-      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-        try {
-          const bsCollapse = new Collapse(navbarCollapse, {
-            toggle: false
-          });
-          bsCollapse.hide();
-        } catch (error) {
-          navbarCollapse.classList.remove('show');
-        }
-      }
-      
+      this.closeMobileMenu();
       this.handleAnchorClick(anchor);
     },
     
@@ -113,18 +104,25 @@ export default {
     },
     
     toggleMobileMenu() {
+      this.isMobileMenuOpen = !this.isMobileMenuOpen;
+      const button = document.querySelector('.navbar-toggler');
+      if (button) {
+        button.setAttribute('aria-expanded', this.isMobileMenuOpen.toString());
+      }
+    },
+    
+    closeMobileMenu() {
+      this.isMobileMenuOpen = false;
+      const button = document.querySelector('.navbar-toggler');
+      if (button) {
+        button.setAttribute('aria-expanded', 'false');
+      }
+    },
+    
+    closeMobileMenu() {
       const navbarCollapse = document.querySelector('#mobileNavbar');
       if (navbarCollapse) {
-        const isExpanded = navbarCollapse.classList.contains('show');
-        const button = document.querySelector('.navbar-toggler');
-        
-        if (isExpanded) {
-          navbarCollapse.classList.remove('show');
-          button.setAttribute('aria-expanded', 'false');
-        } else {
-          navbarCollapse.classList.add('show');
-          button.setAttribute('aria-expanded', 'true');
-        }
+        navbarCollapse.classList.remove('show');
       }
     }
   }
@@ -261,7 +259,7 @@ export default {
   }
 }
 
-    // Adjust for content not to be under the fixed navbar
+// Ajuste para o conteúdo não ficar sob o navbar fixo
 body {
   padding-top: 80px;
 }

@@ -5,8 +5,8 @@
         <div class="col-md-12">
           <div class="benefits-content">
             <span class="monospace">Benefits</span>
-            <h2 class="title fade-in-up">{{ title }}</h2>
-            <p class="subtitle fade-in">{{ subtitle }}</p>
+            <h2 class="title" data-aos="fade-up">{{ title }}</h2>
+            <p class="subtitle" data-aos="fade-up">{{ subtitle }}</p>
           </div>
         </div>
       </div>
@@ -18,7 +18,7 @@
         :description="benefitItem.subtitle"
         :iconName="benefitItem.icon"/>
       </div>
-      <img src="@/assets/landscape.avif" class="img-fluid landscape"> 
+      <img src="@/assets/landscape.avif" class="img-fluid landscape" data-aos="fade"> 
     </div>
   </section>
 </template>

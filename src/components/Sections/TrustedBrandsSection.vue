@@ -34,11 +34,11 @@
     grid-template-rows: repeat(2, auto);
   }
 
-  @media (max-width: 562px) { // Mobile
+  @media (max-width: 562px) { // Celular
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, auto);
   }
-  @media (max-width: 375.98px) { // Mobile
+  @media (max-width: 375.98px) { // Celular
     grid-template-columns: 2fr;
     grid-template-rows: repeat(3, auto);
   }

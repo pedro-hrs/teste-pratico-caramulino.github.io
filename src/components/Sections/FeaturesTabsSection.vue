@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-12">
           <span class="monospace">Features</span>
-          <h2 class="title fade-in-up">Explore Our Features</h2>
+          <h2 class="title" data-aos="fade-up">Explore Our Features</h2>
           <p class="description">Discover the powerful tools that make Area the perfect solution for your business needs.</p>
         </div>
       </div>

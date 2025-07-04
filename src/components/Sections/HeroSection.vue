@@ -4,10 +4,10 @@
       <div class="row">
         <div class="col-md-12">
           <div class="hero-content">
-            <h1 class="title fade-in-up" >{{title}}</h1>
-            <div class="wrapper-image" >
-              <div class="device fade-in">
-              <img class="dynamic-island" src="@/assets/dynamic-island.svg" alt="">
+            <h1 class="title" data-aos="fade-up">{{title}}</h1>
+            <div class="wrapper-image">
+              <div class="device">
+              <img class="dynamic-island" src="@/assets/dynamic-island.svg" alt="" >
               </div>
             </div>
           </div>

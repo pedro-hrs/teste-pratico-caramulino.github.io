@@ -2,6 +2,16 @@
 @import "./theme.scss";
 @import "./accessibility.scss";
 
+// AOS Animation Styles
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
 html {
   scroll-behavior: smooth;
 }

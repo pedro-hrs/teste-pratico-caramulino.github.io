@@ -3,9 +3,10 @@
     <HeroSection 
       title="Browse everything."/>
     <TrustedBrandsSection 
-      class="fade-in-delay"/>
+    />
     <hr>
     <BenefitsSection
+      data-aos="fade-up"
       title="We've cracked the code."
       subtitle="Area provides real insights, without the data overload."
       :benefitsData="benefitsData"/>

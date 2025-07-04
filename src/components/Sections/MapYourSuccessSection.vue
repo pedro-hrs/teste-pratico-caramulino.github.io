@@ -8,12 +8,13 @@
       <hr>
       <div class="map-container">
         <MapBlock v-for="mapItem in mapYourSuccessData"
+        data-aos="fade"
         :key="mapItem.id"
         :item="mapItem"/>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <img src="@/assets/montain.avif" class="montain-image img-fluid" alt="Map Your Success">
+          <img src="@/assets/montain.avif" class="montain-image img-fluid" alt="Map Your Success" data-aos="fade" data-aos-delay="500">
         </div>
       </div>
     </div>
@@ -63,21 +64,21 @@ export default {
   gap: 20px;
   width: 100%;
   
-        // Desktop: shows all cards side by side
+  // Desktop: mostra todos os cards lado a lado
   @media (min-width: 1024px) {
     justify-content: start;
     flex-wrap: wrap;
   }
   
-      // Tablet and Mobile: horizontal scroll
+  // Tablet e Mobile: scroll horizontal
   @media (max-width: 1023px) {
     overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 10px; // Space for scrollbar
+    padding-bottom: 10px; // Espaço para scrollbar
     
-    // Hide scrollbar in webkit
+    // Esconde scrollbar no webkit
     &::-webkit-scrollbar {
       height: 6px;
     }
@@ -96,7 +97,7 @@ export default {
       }
     }
     
-    // Ensures that cards don't break line
+    // Garante que os cards não quebrem linha
     > * {
       flex-shrink: 0;
     }

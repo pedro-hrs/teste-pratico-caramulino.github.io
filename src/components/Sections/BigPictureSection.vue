@@ -2,9 +2,9 @@
   <section id="big-picture">
     <div class="container">
       <div class="row justify-content-between">
-        <div class="col-md-6 py-2">
+        <div class="col-md-6 py-2" data-aos="fade" data-aos-delay="100">
           <hr>
-          <h2 class="title">See the Big Picture</h2>
+          <h2 class="title" data-aos="fade">See the Big Picture</h2>
           <p class="description">Area turns your data into clear, vibrant visuals that show you exactly what's happening in each region.</p>
           <div class="items">
             <ul v-for="bigPictureItem in bigPictureData" :key="bigPictureItem.title">
@@ -16,7 +16,7 @@
           </div>
           <BaseButton label="Discover More" variant="secondary" navigateTo="#connect-us"/>
         </div>
-        <div class="col-md-6 py-2">
+        <div class="col-md-6 py-2" data-aos="fade" data-aos-delay="200">
           <img src="@/assets/blocks.avif" class="img-fluid blocks"> 
         </div>
       </div>

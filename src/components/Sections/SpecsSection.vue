@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-12">
           <span class="monospace">Specs</span>
-          <h2 class="title fade-in-up">Why Choose Area?</h2>
+          <h2 class="title" data-aos="fade-up">Why Choose Area?</h2>
           <p class="description">
             You need a solution that keeps up. That's why we developed Area. A developer-friendly approach to streamline your business. 
           </p>
@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12" data-aos="fade">
           <Table/>
         </div>
       </div>

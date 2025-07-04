@@ -55,7 +55,7 @@ export default {
   },
   computed: {
     maxRows() {
-      // Returns the largest number of features among products
+      // Retorna o maior número de características entre os produtos
       return Math.max(...this.items.map(item => item.child.length));
     }
   }

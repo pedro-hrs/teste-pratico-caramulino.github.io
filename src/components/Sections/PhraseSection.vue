@@ -3,10 +3,10 @@
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-md-5 py-3">
-          <img src="@/assets/balls.avif" class="img-phrase fade-in-up" alt="balls">
+          <img src="@/assets/balls.avif" class="img-phrase" data-aos="fade-up" alt="balls">
         </div>
         <div class="col-md-6 py-3">
-          <h3 class="phrase-title fade-in-up">“I was skeptical, but Area has completely transformed the way I manage my business. The data visualizations are so clear and intuitive, and the platform is so easy to use. I can't imagine running my company without it.”</h3>
+          <h3 class="phrase-title" data-aos="fade-up">“I was skeptical, but Area has completely transformed the way I manage my business. The data visualizations are so clear and intuitive, and the platform is so easy to use. I can't imagine running my company without it.”</h3>
           <p class="phrase-name">John Doe</p>
           <p class="phrase-job">CEO, Company Name</p>
         </div>
