@@ -5,7 +5,7 @@ import path from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: process.env.NODE_ENV === 'production' ? '/teste-pratico-caramulino/' : '/',
+  base: '/teste-pratico-caramulino/', // Nome do repositório aqui
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
