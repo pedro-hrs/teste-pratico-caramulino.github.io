@@ -76,7 +76,9 @@ h1.title{
   background: url('@/assets/image.webp');
   background-size: cover;
   background-position: top center;
-  border-radius: 50px 50px 0 0;
+  border-radius: 30px 30px 0 0;
+  outline: 2px solid #636363;
+  outline-offset: -2px;
   border-top: 15px solid #000;
   border-left: 15px solid #000;
   border-right: 15px solid #000;
@@ -126,6 +128,4 @@ h1.title{
     z-index: 1;
     }
 }
-
-
 </style>

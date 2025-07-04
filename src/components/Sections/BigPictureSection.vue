@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="big-picture">
     <div class="container">
       <div class="row justify-content-between">
         <div class="col-md-6 py-2">
@@ -7,10 +7,10 @@
           <h2 class="title">See the Big Picture</h2>
           <p class="description">Area turns your data into clear, vibrant visuals that show you exactly what's happening in each region.</p>
           <div class="items">
-            <ul v-for="item in items" :key="item.title">
+            <ul v-for="bigPictureItem in bigPictureData" :key="bigPictureItem.title">
               <li>
-                <span>{{ item.id }}</span>
-                <p>{{item.title}}</p>
+                <span>{{ bigPictureItem.id }}</span>
+                <p>{{bigPictureItem.title}}</p>
               </li>
             </ul>
           </div>
@@ -32,20 +32,25 @@ export default {
   components: {
     BaseButton
   },
+  props: {
+    bigPictureData: {
+      type: Array,
+      required: true
+    }
+  },
   data() {
     return {
-      items: [
-        { id: "01", title: 'Spot Trends in Seconds: No more digging through numbers.' },
-        { id: "02", title: 'Get Everyone on the Same Page: Share easy-to-understand reports with your team. ' },
-        { id: "03", title: 'Make Presentations Pop: Interactive maps and dashboards keep your audience engaged.' },
-        { id: "04", title: 'Your Global Snapshot: Get a quick, clear overview of your entire operation.' },
-      ]
+      items: this.bigPictureData || []
     }
   }
 }
 </script>
 <style scoped lang="scss">
-@import '../../scss/colors.scss';
+@import './../../scss/colors.scss';
+
+#big-picture{
+  padding: 4rem 0;
+}
 
 .blocks{
   width: 100%;

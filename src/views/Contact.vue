@@ -1,19 +1,52 @@
 <template>
-  <main class="container">
-    <div class="contact-content">
-      <h1>Página de Contato</h1>
-      <p>Esta página está em desenvolvimento.</p>
-    </div>
+  <main id="contact">
+    <section class="container">
+      <div class="row justify-content-center align-items-center py-5">
+        <div class="col-md-6">
+          <img src="@/assets/blocks.avif" alt="Contact Image" class="contact-image img-fluid">
+        </div>
+        <div class="col-md-6">
+          <h1 class="title">Contact Us</h1>
+          <p class="description">We're here to help you with any questions or concerns you may have. Please fill out the form below and we'll get back to you as soon as possible.</p>
+          <BaseButton label="Learn More" variant="primary" withIcon @click="openFormModal"/>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <Footer/>
   </main>
 </template>
 
 <script>
+import BaseButton from '@/components/BaseButton.vue';
+import Footer from '@/components/Footer.vue';
+
 export default {
-  name: 'Contact'
+  name: 'Contact',
+  components: {
+    BaseButton,
+    Footer
+  },
+  data() {
+    return {
+      isFormModalOpen: false
+    }
+  },
+  methods: {
+    openFormModal() {
+      this.isFormModalOpen = true;
+    }
+  }
 }
 </script>
 
 <style scoped>
+.contact-image{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 40px;
+}
 .contact-content {
   padding: 50px 30px;
   text-align: center;
@@ -21,6 +54,7 @@ export default {
 
 .contact-content h1 {
   font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
   margin-bottom: 20px;
   color: #333;
 }

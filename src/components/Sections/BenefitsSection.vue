@@ -12,11 +12,11 @@
       </div>
       <hr>
       <div class="row">
-        <InfoBlock class="col-md-3" v-for="benefit in benefits"
-        :key="benefit.title"
-        :title="benefit.title"
-        :description="benefit.subtitle"
-        :iconName="benefit.icon"/>
+        <InfoBlock class="col-md-3" v-for="benefitItem in benefitsData"
+        :key="benefitItem.title"
+        :title="benefitItem.title"
+        :description="benefitItem.subtitle"
+        :iconName="benefitItem.icon"/>
       </div>
       <img src="@/assets/landscape.avif" class="img-fluid landscape"> 
     </div>
@@ -41,14 +41,16 @@ export default {
       default: "Area provides real insights, without the data overload.",
       required: true
     },
-    benefits: {
+    benefitsData: {
       type: Array,
       default: [],
       required: true
     }
   },
   data() {
-    return {};
+    return {
+      items: this.benefitsData || []
+    };
   }
 };
 </script>

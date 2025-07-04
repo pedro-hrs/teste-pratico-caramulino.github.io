@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
     <NavigationMenu :items="menuItems" />
     <router-view />
   </div>
@@ -18,7 +18,7 @@ export default {
     return {
       menuItems: [
         { label: 'Benefits', link: '#benefits' },
-        { label: 'Specifications', link: '/specifications' },
+        { label: 'Specifications', link: '#specifications' },
         { label: 'How-to', link: '/How-to' },
         { label: 'Contact Us', link: '/contact' }
       ]
