@@ -19,8 +19,8 @@ export default {
       menuItems: [
         { label: 'Benefits', link: '#benefits' },
         { label: 'Specifications', link: '#specifications' },
-        { label: 'How-to', link: '/How-to' },
-        { label: 'Contact Us', link: '/contact' }
+        { label: 'How-to', link: '#map-your-success' },
+        { label: 'Contact Us', link: '#connect-us' }
       ]
      }
   }

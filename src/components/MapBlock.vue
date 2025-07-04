@@ -38,7 +38,7 @@ export default {
   
   // Tablet and Mobile
   @media (max-width: 1023px) {
-    width: 100%;
+    width: 40%;
     min-width: 280px;
   }
 

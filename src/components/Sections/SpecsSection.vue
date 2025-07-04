@@ -6,9 +6,9 @@
           <span class="monospace">Specs</span>
           <h2 class="title fade-in-up">Why Choose Area?</h2>
           <p class="description">
-            You need a solution that keeps up. That’s why we developed Area. A developer-friendly approach to streamline your business. 
+            You need a solution that keeps up. That's why we developed Area. A developer-friendly approach to streamline your business. 
           </p>
-          <BaseButton label="Discover More" variant="secondary" />
+          <BaseButton label="Discover More" variant="secondary" navigateTo="#connect-us"/>
         </div>
       </div>
       <div class="row">

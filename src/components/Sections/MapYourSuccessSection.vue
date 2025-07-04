@@ -1,9 +1,9 @@
 <template>
-  <section class="map-your-success-section">
+  <section id="map-your-success" class="map-your-success-section">
     <div class="container">
       <div class="wrapper-title">
         <h2 class="title">{{ title }}</h2>
-        <BaseButton label="Discover More" variant="secondary"/>
+        <BaseButton label="Discover More" variant="secondary" navigateTo="#connect-us"/>
       </div>
       <hr>
       <div class="map-container">

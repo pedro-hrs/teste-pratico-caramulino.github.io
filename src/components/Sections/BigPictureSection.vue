@@ -14,7 +14,7 @@
               </li>
             </ul>
           </div>
-          <BaseButton label="Discover More" variant="secondary" />
+          <BaseButton label="Discover More" variant="secondary" navigateTo="#connect-us"/>
         </div>
         <div class="col-md-6 py-2">
           <img src="@/assets/blocks.avif" class="img-fluid blocks"> 

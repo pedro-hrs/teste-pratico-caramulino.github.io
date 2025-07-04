@@ -14,18 +14,26 @@
     </section>
     <hr>
     <Footer/>
+    
+    <ContactFormModal 
+      :isOpen="isFormModalOpen"
+      @close="closeFormModal"
+      @success="handleFormSuccess"
+    />
   </main>
 </template>
 
 <script>
 import BaseButton from '@/components/BaseButton.vue';
 import Footer from '@/components/Footer.vue';
+import ContactFormModal from '@/components/ContactFormModal.vue';
 
 export default {
   name: 'Contact',
   components: {
     BaseButton,
-    Footer
+    Footer,
+    ContactFormModal
   },
   data() {
     return {
@@ -35,6 +43,14 @@ export default {
   methods: {
     openFormModal() {
       this.isFormModalOpen = true;
+    },
+    
+    closeFormModal() {
+      this.isFormModalOpen = false;
+    },
+    
+    handleFormSuccess(formData) {
+      console.log('Form sent successfully:', formData);
     }
   }
 }

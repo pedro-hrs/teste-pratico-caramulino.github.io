@@ -18,6 +18,11 @@ body {
     display: none;
 }
 
+// Scroll behavior for smooth scrolling
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
 
 
 hr{
@@ -75,4 +80,26 @@ p.subtitle {
   color: $color-gray-600;
   text-align: left;
   margin-bottom: 2rem;
+}
+
+// Form
+
+.form-label {
+  font-family: 'DM Sans', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: $color-gray-600;
+  border-radius: 50px;
+}
+textarea.form-control{
+  border-radius: 20px;
+}
+.form-select, input[type="text"],input[type="textarea"], input[type="email"], input[type="tel"], input[type="number"], input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="url"], input[type="search"], input[type="color"], input[type="file"], input[type="range"], input[type="password"], input[type="textarea"] {
+  border-radius: 50px;
+  border: 1px solid $color-gray-400;
+  padding: 0.5rem 1rem;
+  font-family: 'DM Sans', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: $color-gray-600;
 }
