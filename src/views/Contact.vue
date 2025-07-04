@@ -2,10 +2,10 @@
   <main id="contact">
     <section class="container">
       <div class="row justify-content-center align-items-center py-5">
-        <div class="col-md-6">
+        <div class="col-md-6 py-3">
           <img src="@/assets/blocks.avif" alt="Contact Image" class="contact-image img-fluid">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 py-3">
           <h1 class="title">Contact Us</h1>
           <p class="description">We're here to help you with any questions or concerns you may have. Please fill out the form below and we'll get back to you as soon as possible.</p>
           <BaseButton label="Learn More" variant="primary" withIcon @click="openFormModal"/>
@@ -56,7 +56,17 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
+@media (max-width: 768px) {
+#contact{
+    padding-top: 60px;
+  }
+  .contact-image{
+    height: 300px;
+  }
+}
+
 .contact-image{
   width: 100%;
   height: 500px;

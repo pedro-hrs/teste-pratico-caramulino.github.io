@@ -8,6 +8,9 @@
         <li class="footer-nav-item">
           <a href="#specifications">Specifications</a>
         </li>
+        <li class="footer-nav-item">
+          <a href="#how-to">How-to</a>
+        </li>
       </ul>
     </nav>
     <div class="footer-content">
@@ -122,6 +125,13 @@ nav.footer-navigation {
   }
   .footer-boneco {
     height: 40px;
+  }
+  .footer-navigation{
+    text-align: center;
+
+    ul{
+      justify-content: center;
+    }
   }
 }
 </style>

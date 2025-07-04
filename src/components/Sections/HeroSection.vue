@@ -42,6 +42,7 @@ export default {
 @import '@/scss/colors.scss';
 
 .hero-content{
+  padding-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,6 +99,9 @@ h1.title{
 
 // Media queries for mobile devices
 @media (max-width: 768px) {
+  .hero-content{
+    padding-top: 120px;
+  }
   h1.title{
     font-size: 4.5rem;
     font-weight: 100;
